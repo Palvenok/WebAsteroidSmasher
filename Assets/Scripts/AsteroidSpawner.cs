@@ -13,6 +13,7 @@ public class AsteroidSpawner : MonoBehaviour
     [SerializeField] private Transform _target;
     [SerializeField] private int _maxAsteroidCount = 5;
     [SerializeField] private float _launchPower = 1f;
+    [SerializeField] private float _launchPowerAmplifier = 0.02f;
 
     private int _currentAsteroidCount = 0;
     private bool _isActive;
@@ -86,7 +87,7 @@ public class AsteroidSpawner : MonoBehaviour
         _currentAsteroidCount--;
         if(scored)
             _crushedCount++;
-        _launchPower += 0.02f;
+        _launchPower += _launchPowerAmplifier;
 
         OnCrushedCountUpdate?.Invoke(_crushedCount);
     }

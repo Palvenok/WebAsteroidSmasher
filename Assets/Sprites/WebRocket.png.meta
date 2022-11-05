@@ -527,6 +527,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Mouse
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60504efc98606a24aab4081ade0d636d
+      internalID: 1418148368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -543,6 +564,7 @@ TextureImporter:
       WebRocket_7: -979495809
       Health: 401154111
       Asterid_Big: -2005673852
+      Mouse: 1418148368
       Heart: 237111404
       Fire_1: 244956030
       Booster: -1100399386
