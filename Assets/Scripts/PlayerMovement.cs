@@ -1,10 +1,13 @@
 using System;
 using Unity.Mathematics;
 using UnityEngine;
+using UnityEngine.Events;
 
 [RequireComponent(typeof(Rigidbody2D))]
 public class PlayerMovement : MonoBehaviour
 {
+    public UnityEvent<float> OnBoostEnergyUpdate;
+
     [SerializeField] private float _maxSpeed = 5f;
     [SerializeField] private float _trustForce = 5f;
     [SerializeField] private float _boostForceScale = 1.5f;
@@ -21,7 +24,15 @@ public class PlayerMovement : MonoBehaviour
     public bool BoostSpeed { set { _boostSpeed = value; } }
     public Vector2 MoveDirection { set {_moveDirection = value;} }
 
-    public float BoostEnergy => _boostEnergy;
+    public float BoostEnergy
+    {
+        get => _boostEnergy;
+        private set
+        {
+            _boostEnergy = Mathf.Clamp01(value);
+            OnBoostEnergyUpdate?.Invoke(_boostEnergy);
+        }
+    }
 
     private void Awake()
     {
@@ -31,8 +42,6 @@ public class PlayerMovement : MonoBehaviour
     private void FixedUpdate()
     {
         if (!_isActive) return;
-
-        _boostEnergy = Mathf.Clamp01(_boostEnergy);
 
         Move();
         LookAt();
@@ -47,6 +56,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void Move()
     {
+        if (!_boostSpeed) BoostEnergy += _boostEnergyRestore * Time.deltaTime;
+
         if (_moveDirection == Vector2.zero) return;
 
         var force = _trustForce;
@@ -56,10 +67,9 @@ public class PlayerMovement : MonoBehaviour
         if (_boostSpeed && _boostEnergy > 0) 
         { 
             force *= _boostForceScale;
-            _boostEnergy -= _boostEnergyRate * Time.deltaTime;
+            BoostEnergy -= _boostEnergyRate * Time.deltaTime;
         }
 
-        if (!_boostSpeed) _boostEnergy += _boostEnergyRestore * Time.deltaTime;
 
         if (_moveDirection.y < 0) force *= .4f;
 
