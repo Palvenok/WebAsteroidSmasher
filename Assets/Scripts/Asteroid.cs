@@ -7,14 +7,19 @@ public class Asteroid : MonoBehaviour
     public int ID = 0;
 
     [SerializeField] private ParticleSystem _explodeParticles;
+    [SerializeField] private AudioSource _explodeSound;
     [SerializeField] private bool _destroyOnExplode;
 
     private Rigidbody2D _rb;
     private Transform _target;
+    private AudioSource _audio;
+    private float _pitch;
 
     private void Awake()
     {
         _rb = GetComponent<Rigidbody2D>();
+        _audio = Instantiate(_explodeSound, transform.position, Quaternion.identity);
+        _pitch = _audio.pitch;
     }
 
     public void Instantiate(Transform target)
@@ -51,7 +56,12 @@ public class Asteroid : MonoBehaviour
     public void Explode(bool scored)
     {
         if (scored)
+        {
+            _audio.transform.position = transform.position;
+            _audio.pitch = Random.Range(_pitch - .3f, _pitch + .3f);
+            _audio.Play();
             Instantiate(_explodeParticles, transform.position, Quaternion.identity);
+        }
         OnExplode?.Invoke(scored);
         if (_destroyOnExplode) 
             Destroy(gameObject);

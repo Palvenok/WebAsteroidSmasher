@@ -103,7 +103,9 @@ MonoBehaviour:
   OnExplode:
     m_PersistentCalls:
       m_Calls: []
+  ID: 0
   _explodeParticles: {fileID: 2433282508523890284, guid: 3ef3ae421f71c5c4e97fe12dc2fc6312, type: 3}
+  _explodeSound: {fileID: 398886935142948379, guid: 4a6c71e46e1d76f44b6726a2e22ed0d0, type: 3}
   _destroyOnExplode: 0
 --- !u!50 &-1001705302602748353
 Rigidbody2D:
@@ -170,6 +172,9 @@ MonoBehaviour:
           m_BoolArgument: 1
         m_CallState: 2
   OnHealthUpdate:
+    m_PersistentCalls:
+      m_Calls: []
+  OnHealthInit:
     m_PersistentCalls:
       m_Calls: []
   _health: 3

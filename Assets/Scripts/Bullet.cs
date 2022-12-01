@@ -7,12 +7,15 @@ public class Bullet : MonoBehaviour
     [SerializeField] private float _speed;
     [SerializeField] private float _lifeTime = 1f;
     [SerializeField] private ParticleSystem _explodeParticles;
+    [SerializeField] private AudioSource _source;
 
+    private AudioSource _audio;
     private Rigidbody2D _rb;
 
     private void Awake()
     {
-        _rb = GetComponent<Rigidbody2D>();   
+        _rb = GetComponent<Rigidbody2D>();
+        _audio = Instantiate(_source, transform.position, Quaternion.identity);
     }
 
     public void Launch()
@@ -43,6 +46,8 @@ public class Bullet : MonoBehaviour
 
     private void Explode()
     {
+        _audio.transform.position = transform.position;
+        _audio.Play();
         Instantiate(_explodeParticles, transform.position, Quaternion.identity);
         gameObject.SetActive(false);
     }

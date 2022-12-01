@@ -123,6 +123,7 @@ MonoBehaviour:
   _speed: 20
   _lifeTime: 1
   _explodeParticles: {fileID: 19800000, guid: 83cd9cc9f9c88824ba18dc59b05ae328, type: 3}
+  _source: {fileID: 398886935142948379, guid: b28da4820e6d5c34e853028213cbb388, type: 3}
 --- !u!61 &7877093657224469177
 BoxCollider2D:
   m_ObjectHideFlags: 0
