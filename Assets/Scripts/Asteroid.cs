@@ -4,7 +4,6 @@ using UnityEngine.Events;
 public class Asteroid : MonoBehaviour
 {
     public UnityEvent<bool> OnExplode;
-    public int ID = 0;
 
     [SerializeField] private ParticleSystem _explodeParticles;
     [SerializeField] private AudioSource _explodeSound;
@@ -18,7 +17,7 @@ public class Asteroid : MonoBehaviour
     private void Awake()
     {
         _rb = GetComponent<Rigidbody2D>();
-        _audio = Instantiate(_explodeSound, transform.position, Quaternion.identity);
+        _audio = Instantiate(_explodeSound, transform.position, Quaternion.identity, transform.parent);
         _pitch = _audio.pitch;
     }
 

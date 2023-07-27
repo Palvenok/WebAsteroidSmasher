@@ -15,7 +15,7 @@ public class Bullet : MonoBehaviour
     private void Awake()
     {
         _rb = GetComponent<Rigidbody2D>();
-        _audio = Instantiate(_source, transform.position, Quaternion.identity);
+        _audio = Instantiate(_source, transform.position, Quaternion.identity, transform.parent);
     }
 
     public void Launch()
