@@ -10,6 +10,10 @@ public class BulletPool : MonoBehaviour
     private void Awake()
     {
         _pool = new ObjectPool<Bullet>(_bulletPrefab, _bulletCount, transform);
+        foreach (Bullet bullet in _pool) 
+        {
+            bullet.gameObject.SetActive(false);
+        }
     }
 
     public Bullet GetNextBullet()

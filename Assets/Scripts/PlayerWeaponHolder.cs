@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 public class PlayerWeaponHolder : MonoBehaviour
@@ -8,6 +7,7 @@ public class PlayerWeaponHolder : MonoBehaviour
 
     private Weapon _activeWeapon;
     private int _weaponIndex;
+    private bool _isActive;
 
     public int WeaponIndex
     {
@@ -22,6 +22,8 @@ public class PlayerWeaponHolder : MonoBehaviour
 
     private void Awake()
     {
+        GetComponent<Player>().OnStatusUpdate.AddListener(x => _isActive = x);
+
         foreach (var weapon in _weapons)
             weapon.SetBulletPool(_bulletPool);
 
@@ -41,6 +43,7 @@ public class PlayerWeaponHolder : MonoBehaviour
 
     public void Fire()
     {
-        _activeWeapon.Fire();
+        if(_isActive)
+            _activeWeapon.Fire();
     }
 }

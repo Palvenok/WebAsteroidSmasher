@@ -240,7 +240,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -1781288701, guid: e94c7d1835e75a44cb6dd9e94e6bdc28, type: 3}
+  m_Sprite: {fileID: 1073996375, guid: 670f8c49ec38a534b90d30b708b831c5, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -249,7 +249,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
+  m_PixelsPerUnitMultiplier: 3
 --- !u!222 &21311491
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -328,7 +328,7 @@ MonoBehaviour:
     m_FadeDuration: 0.1
   m_SpriteState:
     m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 2141042253, guid: e94c7d1835e75a44cb6dd9e94e6bdc28, type: 3}
+    m_PressedSprite: {fileID: 149821697, guid: 670f8c49ec38a534b90d30b708b831c5, type: 3}
     m_SelectedSprite: {fileID: 0}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
@@ -374,7 +374,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -1781288701, guid: e94c7d1835e75a44cb6dd9e94e6bdc28, type: 3}
+  m_Sprite: {fileID: 1073996375, guid: 670f8c49ec38a534b90d30b708b831c5, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -383,7 +383,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
+  m_PixelsPerUnitMultiplier: 3
 --- !u!222 &78163805
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -636,7 +636,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -1781288701, guid: e94c7d1835e75a44cb6dd9e94e6bdc28, type: 3}
+  m_Sprite: {fileID: 1073996375, guid: 670f8c49ec38a534b90d30b708b831c5, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -645,7 +645,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
+  m_PixelsPerUnitMultiplier: 3
 --- !u!222 &262493451
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -906,7 +906,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 993743071, guid: e94c7d1835e75a44cb6dd9e94e6bdc28, type: 3}
+  m_Sprite: {fileID: 657133621, guid: 670f8c49ec38a534b90d30b708b831c5, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1008,8 +1008,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 592bb2cad9798474a82cc5f53b5072a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _defaultSprite: {fileID: 993743071, guid: e94c7d1835e75a44cb6dd9e94e6bdc28, type: 3}
-  _toggledSprite: {fileID: 1126312075, guid: e94c7d1835e75a44cb6dd9e94e6bdc28, type: 3}
+  _defaultSprite: {fileID: 657133621, guid: 670f8c49ec38a534b90d30b708b831c5, type: 3}
+  _toggledSprite: {fileID: -1479476143, guid: 670f8c49ec38a534b90d30b708b831c5, type: 3}
 --- !u!1 &419261091
 GameObject:
   m_ObjectHideFlags: 0
@@ -1156,7 +1156,7 @@ MonoBehaviour:
     m_FadeDuration: 0.1
   m_SpriteState:
     m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 2141042253, guid: e94c7d1835e75a44cb6dd9e94e6bdc28, type: 3}
+    m_PressedSprite: {fileID: 149821697, guid: 670f8c49ec38a534b90d30b708b831c5, type: 3}
     m_SelectedSprite: {fileID: 0}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
@@ -1202,7 +1202,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -1781288701, guid: e94c7d1835e75a44cb6dd9e94e6bdc28, type: 3}
+  m_Sprite: {fileID: 1073996375, guid: 670f8c49ec38a534b90d30b708b831c5, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1211,7 +1211,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
+  m_PixelsPerUnitMultiplier: 3
 --- !u!222 &426890205
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1269,10 +1269,6 @@ PrefabInstance:
     - target: {fileID: 5569120971291299409, guid: 711efdb93208a8141849f0199b948dc3, type: 3}
       propertyPath: m_Name
       value: Asteroid Small 0 (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 5569120971291299409, guid: 711efdb93208a8141849f0199b948dc3, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5569120971291299415, guid: 711efdb93208a8141849f0199b948dc3, type: 3}
       propertyPath: m_RootOrder
@@ -6427,6 +6423,57 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  OnGameStarted:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1921283354}
+        m_TargetAssemblyTypeName: Asteroid, Assembly-CSharp
+        m_MethodName: Explode
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1884317847}
+        m_TargetAssemblyTypeName: Asteroid, Assembly-CSharp
+        m_MethodName: Explode
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1036531726}
+        m_TargetAssemblyTypeName: Asteroid, Assembly-CSharp
+        m_MethodName: Explode
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 829684024}
+        m_TargetAssemblyTypeName: AsteroidSpawner, Assembly-CSharp
+        m_MethodName: EnableSpawner
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &519420035
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6639,15 +6686,13 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  _asteroidsPool: []
   _asteroidsPrefabs:
   - {fileID: 3941383077694656181, guid: 4a9a412195158db4a8c239dd62c8bcb2, type: 3}
   - {fileID: 2534025444591577906, guid: 711efdb93208a8141849f0199b948dc3, type: 3}
   - {fileID: 2534025444591577906, guid: 2c8465b9791eca14c9c67346c5e5f282, type: 3}
   _boxCollider: {fileID: 7165031}
-  _asteroidsLimit: 20
   _target: {fileID: 1266647716}
-  _maxAsteroidCount: 5
+  _asteroidsCountAtStart: 5
   _launchPower: 3
   _launchPowerAmplifier: 0.05
 --- !u!1 &878694785
@@ -6709,7 +6754,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 1418148368, guid: e94c7d1835e75a44cb6dd9e94e6bdc28, type: 3}
+  m_Sprite: {fileID: 1733135139, guid: 670f8c49ec38a534b90d30b708b831c5, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -7006,7 +7051,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 2141042253, guid: e94c7d1835e75a44cb6dd9e94e6bdc28, type: 3}
+  m_Sprite: {fileID: 149821697, guid: 670f8c49ec38a534b90d30b708b831c5, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -7015,7 +7060,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
+  m_PixelsPerUnitMultiplier: 3
 --- !u!222 &1053837412
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7774,7 +7819,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 2141042253, guid: e94c7d1835e75a44cb6dd9e94e6bdc28, type: 3}
+  m_Sprite: {fileID: 149821697, guid: 670f8c49ec38a534b90d30b708b831c5, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -7783,7 +7828,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
+  m_PixelsPerUnitMultiplier: 3
 --- !u!222 &1227161049
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7971,7 +8016,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -1781288701, guid: e94c7d1835e75a44cb6dd9e94e6bdc28, type: 3}
+  m_Sprite: {fileID: 1073996375, guid: 670f8c49ec38a534b90d30b708b831c5, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -7980,7 +8025,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
+  m_PixelsPerUnitMultiplier: 3
 --- !u!222 &1365360110
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8059,7 +8104,7 @@ MonoBehaviour:
     m_FadeDuration: 0.1
   m_SpriteState:
     m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 2141042253, guid: e94c7d1835e75a44cb6dd9e94e6bdc28, type: 3}
+    m_PressedSprite: {fileID: 149821697, guid: 670f8c49ec38a534b90d30b708b831c5, type: 3}
     m_SelectedSprite: {fileID: 0}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
@@ -8109,34 +8154,10 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1921283354}
-        m_TargetAssemblyTypeName: Asteroid, Assembly-CSharp
-        m_MethodName: Explode
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 1884317847}
-        m_TargetAssemblyTypeName: Asteroid, Assembly-CSharp
-        m_MethodName: Explode
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 1036531726}
-        m_TargetAssemblyTypeName: Asteroid, Assembly-CSharp
-        m_MethodName: Explode
-        m_Mode: 6
+      - m_Target: {fileID: 519420034}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: StartGame
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -8165,7 +8186,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -1781288701, guid: e94c7d1835e75a44cb6dd9e94e6bdc28, type: 3}
+  m_Sprite: {fileID: 1073996375, guid: 670f8c49ec38a534b90d30b708b831c5, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -8174,7 +8195,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
+  m_PixelsPerUnitMultiplier: 2
 --- !u!222 &1402615595
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8356,7 +8377,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -2132469998, guid: e94c7d1835e75a44cb6dd9e94e6bdc28, type: 3}
+  m_Sprite: {fileID: 1433286435, guid: 670f8c49ec38a534b90d30b708b831c5, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -8458,8 +8479,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 592bb2cad9798474a82cc5f53b5072a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _defaultSprite: {fileID: -2132469998, guid: e94c7d1835e75a44cb6dd9e94e6bdc28, type: 3}
-  _toggledSprite: {fileID: -1363339511, guid: e94c7d1835e75a44cb6dd9e94e6bdc28, type: 3}
+  _defaultSprite: {fileID: 1433286435, guid: 670f8c49ec38a534b90d30b708b831c5, type: 3}
+  _toggledSprite: {fileID: -1900307097, guid: 670f8c49ec38a534b90d30b708b831c5, type: 3}
 --- !u!1 &1454115006
 GameObject:
   m_ObjectHideFlags: 0
@@ -8664,8 +8685,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 776b65d71ae12e44989574d1dae5d6d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _heart: {fileID: 237111404, guid: e94c7d1835e75a44cb6dd9e94e6bdc28, type: 3}
-  _brockenHeart: {fileID: -1579080321, guid: e94c7d1835e75a44cb6dd9e94e6bdc28, type: 3}
+  _heart: {fileID: -4085082, guid: 670f8c49ec38a534b90d30b708b831c5, type: 3}
+  _brockenHeart: {fileID: -1462667256, guid: 670f8c49ec38a534b90d30b708b831c5, type: 3}
   _heartPrefab: {fileID: 4686318470862109815, guid: 5a9d86a67d6aed64e9d962c319ba19a9, type: 3}
 --- !u!1 &1497793932
 GameObject:
@@ -9454,7 +9475,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -1781288701, guid: e94c7d1835e75a44cb6dd9e94e6bdc28, type: 3}
+  m_Sprite: {fileID: 1073996375, guid: 670f8c49ec38a534b90d30b708b831c5, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -9463,7 +9484,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
+  m_PixelsPerUnitMultiplier: 3
 --- !u!222 &1936543921
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -9701,7 +9722,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 2141042253, guid: e94c7d1835e75a44cb6dd9e94e6bdc28, type: 3}
+  m_Sprite: {fileID: 149821697, guid: 670f8c49ec38a534b90d30b708b831c5, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -9710,7 +9731,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
+  m_PixelsPerUnitMultiplier: 3
 --- !u!222 &2047604901
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -9778,7 +9799,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -1781288701, guid: e94c7d1835e75a44cb6dd9e94e6bdc28, type: 3}
+  m_Sprite: {fileID: 1073996375, guid: 670f8c49ec38a534b90d30b708b831c5, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -9787,7 +9808,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
+  m_PixelsPerUnitMultiplier: 3
 --- !u!222 &2096006844
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -9977,10 +9998,6 @@ PrefabInstance:
     - target: {fileID: 2769097657078237567, guid: c8b27ca599a4ff346974610d2bf19890, type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 3864176638261424346, guid: c8b27ca599a4ff346974610d2bf19890, type: 3}
-      propertyPath: _shootDelay
-      value: 0.06
       objectReference: {fileID: 0}
     - target: {fileID: 6678711923057225243, guid: c8b27ca599a4ff346974610d2bf19890, type: 3}
       propertyPath: _bulletPool

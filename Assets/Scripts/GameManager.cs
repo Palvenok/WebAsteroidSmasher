@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public UnityEvent<int> OnScoreUpdate;
+    public UnityEvent OnGameStarted;
 
     private int _score = 0;
 
@@ -21,5 +22,10 @@ public class GameManager : MonoBehaviour
     public void ReastartGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void StartGame()
+    {
+        OnGameStarted?.Invoke();
     }
 }

@@ -14,16 +14,16 @@ public class Asteroid : MonoBehaviour
     private AudioSource _audio;
     private float _pitch;
 
+    public void SetTarget(Transform target)
+    {
+        _target = target;
+    }
+
     private void Awake()
     {
         _rb = GetComponent<Rigidbody2D>();
         _audio = Instantiate(_explodeSound, transform.position, Quaternion.identity, transform.parent);
         _pitch = _audio.pitch;
-    }
-
-    public void Instantiate(Transform target)
-    {
-        _target = target;
     }
 
     private void Update()
@@ -35,7 +35,6 @@ public class Asteroid : MonoBehaviour
             Explode(false);
         }
     }
-
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -61,7 +60,9 @@ public class Asteroid : MonoBehaviour
             _audio.Play();
             Instantiate(_explodeParticles, transform.position, Quaternion.identity);
         }
+
         OnExplode?.Invoke(scored);
+
         if (_destroyOnExplode) 
             Destroy(gameObject);
         gameObject.SetActive(false);

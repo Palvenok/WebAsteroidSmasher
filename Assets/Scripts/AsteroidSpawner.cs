@@ -6,50 +6,55 @@ public class AsteroidSpawner : MonoBehaviour
 {
     public UnityEvent<int> OnCrushedCountUpdate;
 
-    [SerializeField] private Asteroid[] _asteroidsPool;
     [SerializeField] private Asteroid[] _asteroidsPrefabs;
     [SerializeField] private BoxCollider2D _boxCollider;
-    [SerializeField] private int _asteroidsLimit = 20;
     [SerializeField] private Transform _target;
-    [SerializeField] private int _maxAsteroidCount = 5;
+    [SerializeField] private int _asteroidsCountAtStart = 5;
     [SerializeField] private float _launchPower = 1f;
     [SerializeField] private float _launchPowerAmplifier = 0.02f;
 
-    private int _currentAsteroidCount = 0;
-    private bool _isActive;
-    private int _index = 0;
-    private int _crushedCount = 0;
+    private int _asteroidsLimit = 20;
+    private int _crushedCount;
 
-    public bool IsActive { set { _isActive = value; } }
+    private List<ObjectPool<Asteroid>> _listOfPools;
 
     private void Awake()
-    {
-        _asteroidsPool = new Asteroid[_asteroidsLimit];
+    {        
+        _listOfPools = new List<ObjectPool<Asteroid>>();
 
-        for (int i = 0; i < _asteroidsPool.Length; i++)
+        foreach (var item in _asteroidsPrefabs)
         {
-            _asteroidsPool[i] = Instantiate(_asteroidsPrefabs[Random.Range(0, _asteroidsPrefabs.Length)], transform);
-            _asteroidsPool[i].Instantiate(_target);
-            _asteroidsPool[i].gameObject.SetActive(false);
-            _asteroidsPool[i].OnExplode.AddListener(OnAsteroidExplode);
+            var pool = new ObjectPool<Asteroid>(item, _asteroidsLimit, transform);
+            foreach (Asteroid asteroid in pool)
+            {
+                asteroid.OnExplode.AddListener(OnAsteroidExplode);
+                asteroid.SetTarget(_target);
+                asteroid.gameObject.SetActive(false);
+            }
+            _listOfPools.Add(pool);
         }
     }
 
-    private void Update()
+    public void EnableSpawner()
     {
-        if (!_isActive) return;
-
-        if (_currentAsteroidCount < _maxAsteroidCount)
+        for (int i = 0; i < _asteroidsCountAtStart; i++)
         {
-            if (_index >= _asteroidsLimit) _index = 0;
-
-            SpawnAsteroid(_index); 
-            _currentAsteroidCount++;
-            _index++;
+            SpawnAsteroid();
         }
     }
 
-    private void SpawnAsteroid(int id)
+    private void SpawnAsteroid()
+    {
+        int poolIndex = Random.Range(0, _listOfPools.Count);
+
+        var asteroid = _listOfPools[poolIndex].GetNext();
+        asteroid.transform.position = GetPointAtBounds();
+        asteroid.transform.Rotate(0, 0, Random.Range(0, 180));
+        asteroid.gameObject.SetActive(true);
+        asteroid.Launch(_launchPower);
+    }
+
+    private Vector2 GetPointAtBounds()
     {
         Vector2 point = new Vector2();
 
@@ -75,20 +80,24 @@ public class AsteroidSpawner : MonoBehaviour
                 break;
         }
 
-
-        _asteroidsPool[id].transform.position = point;
-        _asteroidsPool[id].transform.Rotate(0, 0, Random.Range(0, 180));
-        _asteroidsPool[id].gameObject.SetActive(true);
-        _asteroidsPool[id].Launch(_launchPower);
+        return point;
     }
 
     private void OnAsteroidExplode(bool scored)
     {
-        _currentAsteroidCount--;
+        ///TODO:
+        ///Fix double picking on explode
+
         if(scored)
             _crushedCount++;
         _launchPower += _launchPowerAmplifier;
 
         OnCrushedCountUpdate?.Invoke(_crushedCount);
+
+        SpawnAsteroid();
+        if (_crushedCount % 50 == 0)
+        {
+            SpawnAsteroid();
+        }
     }
 }

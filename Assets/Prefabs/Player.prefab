@@ -32,7 +32,7 @@ Transform:
   m_GameObject: {fileID: 2769097657078237567}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 172336787757508093}
@@ -84,12 +84,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 4ca989fbc85b0e6468c791c712bff480, type: 3}
+  m_Sprite: {fileID: -1816504757, guid: 670f8c49ec38a534b90d30b708b831c5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_DrawMode: 1
+  m_Size: {x: 0.5, y: 0.5}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -112,24 +112,24 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
+    oldSize: {x: 2, y: 2}
+    newSize: {x: 0.5, y: 0.5}
     adaptiveTilingThreshold: 0.5
-    drawMode: 0
+    drawMode: 1
     adaptiveTiling: 0
   m_AutoTiling: 0
   m_Points:
     m_Paths:
     - - {x: -0.044999998, y: -0.195}
       - {x: 0.047919508, y: -0.19491586}
-      - {x: 0.26, y: -0.32}
-      - {x: 0.32, y: -0.32}
-      - {x: 0.32, y: -0.26}
-      - {x: 0.03, y: 0.32}
-      - {x: -0.03, y: 0.32}
-      - {x: -0.32, y: -0.26}
-      - {x: -0.32, y: -0.32}
-      - {x: -0.26, y: -0.32}
+      - {x: 0.10542317, y: -0.20843583}
+      - {x: 0.16407903, y: -0.25010437}
+      - {x: 0.20305929, y: -0.22774047}
+      - {x: 0.031344146, y: 0.23263049}
+      - {x: -0.03, y: 0.23263049}
+      - {x: -0.20037095, y: -0.22370803}
+      - {x: -0.16676731, y: -0.24607196}
+      - {x: -0.11348803, y: -0.21112415}
 --- !u!50 &2769097657078237565
 Rigidbody2D:
   serializedVersion: 4
@@ -349,8 +349,8 @@ MonoBehaviour:
   _weapons:
   - {fileID: 8300093732680772727}
   - {fileID: 3443394607369633151}
-  - {fileID: 5391761523431833967}
   - {fileID: 3864176638261424346}
+  - {fileID: 5391761523431833967}
 --- !u!1 &3831733810676905977
 GameObject:
   m_ObjectHideFlags: 0
@@ -377,8 +377,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3831733810676905977}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.498, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: -0.237, z: 0}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2769097657078237563}
@@ -425,7 +425,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 416220640, guid: e94c7d1835e75a44cb6dd9e94e6bdc28, type: 3}
+  m_Sprite: {fileID: -290021124, guid: 670f8c49ec38a534b90d30b708b831c5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -452,14 +452,14 @@ MonoBehaviour:
   _boostedColor: {r: 0.19241722, g: 0.79896235, b: 0.8679245, a: 1}
   _animationDelay: 0.1
   _sprites:
-  - {fileID: 416220640, guid: e94c7d1835e75a44cb6dd9e94e6bdc28, type: 3}
-  - {fileID: 244956030, guid: e94c7d1835e75a44cb6dd9e94e6bdc28, type: 3}
-  - {fileID: 1453075555, guid: e94c7d1835e75a44cb6dd9e94e6bdc28, type: 3}
-  - {fileID: 1072317494, guid: e94c7d1835e75a44cb6dd9e94e6bdc28, type: 3}
-  - {fileID: 630973256, guid: e94c7d1835e75a44cb6dd9e94e6bdc28, type: 3}
-  - {fileID: -1911249736, guid: e94c7d1835e75a44cb6dd9e94e6bdc28, type: 3}
-  - {fileID: 1225853714, guid: e94c7d1835e75a44cb6dd9e94e6bdc28, type: 3}
-  - {fileID: -1981379660, guid: e94c7d1835e75a44cb6dd9e94e6bdc28, type: 3}
+  - {fileID: -290021124, guid: 670f8c49ec38a534b90d30b708b831c5, type: 3}
+  - {fileID: -2013455038, guid: 670f8c49ec38a534b90d30b708b831c5, type: 3}
+  - {fileID: -348852630, guid: 670f8c49ec38a534b90d30b708b831c5, type: 3}
+  - {fileID: 1595348851, guid: 670f8c49ec38a534b90d30b708b831c5, type: 3}
+  - {fileID: -367671634, guid: 670f8c49ec38a534b90d30b708b831c5, type: 3}
+  - {fileID: -181729016, guid: 670f8c49ec38a534b90d30b708b831c5, type: 3}
+  - {fileID: -173077001, guid: 670f8c49ec38a534b90d30b708b831c5, type: 3}
+  - {fileID: 728586683, guid: 670f8c49ec38a534b90d30b708b831c5, type: 3}
   _spriteRenderer: {fileID: 7284614870599019012}
   _playerMovement: {fileID: 2769097657078237566}
 --- !u!1001 &3703809673380444599
@@ -546,6 +546,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2769097657078237563}
     m_Modifications:
+    - target: {fileID: 964344746942469705, guid: 6313087ac116ec34dae6da5d82c03f63, type: 3}
+      propertyPath: _shootDelay
+      value: 0.06
+      objectReference: {fileID: 0}
     - target: {fileID: 2431189133049786882, guid: 6313087ac116ec34dae6da5d82c03f63, type: 3}
       propertyPath: m_Name
       value: MiniGun
