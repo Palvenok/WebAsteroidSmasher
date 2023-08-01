@@ -133,8 +133,9 @@ GameObject:
   m_Component:
   - component: {fileID: 7165032}
   - component: {fileID: 7165031}
+  - component: {fileID: 7165033}
   m_Layer: 0
-  m_Name: AsteroidArea
+  m_Name: Spawn Area
   m_TagString: AsteroidArea
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -181,6 +182,18 @@ Transform:
   m_Father: {fileID: 519420032}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7165033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7165030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e8df794b9a44224cb21c51ff70a1e33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &215283170 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1725248378294103650, guid: c8b27ca599a4ff346974610d2bf19890, type: 3}
@@ -5157,6 +5170,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1598997531}
+        m_TargetAssemblyTypeName: SateliteSpawner, Assembly-CSharp
+        m_MethodName: set_Score
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnGameStarted:
     m_PersistentCalls:
       m_Calls:
@@ -5602,6 +5627,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 776b65d71ae12e44989574d1dae5d6d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1598997531 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 766482114417639074, guid: 2711cbd8c03704046b2faca8d38cef0b, type: 3}
+  m_PrefabInstance: {fileID: 6557216737420767942}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ad682a01081bbf438fc0464e5d1e0fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1803891619 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1386691171554001184, guid: c6ec60492497ea4419406b84260570bb, type: 3}
@@ -5930,6 +5966,79 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1266095e6d33f9c41ae9ced448f62cb6, type: 3}
+--- !u!1001 &6557216737420767942
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 766482114417639074, guid: 2711cbd8c03704046b2faca8d38cef0b, type: 3}
+      propertyPath: _target
+      value: 
+      objectReference: {fileID: 1266647716}
+    - target: {fileID: 766482114417639074, guid: 2711cbd8c03704046b2faca8d38cef0b, type: 3}
+      propertyPath: _spawnArea
+      value: 
+      objectReference: {fileID: 7165033}
+    - target: {fileID: 766482114417639074, guid: 2711cbd8c03704046b2faca8d38cef0b, type: 3}
+      propertyPath: _spawScoreSpread.m_ConstantMax
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 766482114417639074, guid: 2711cbd8c03704046b2faca8d38cef0b, type: 3}
+      propertyPath: _spawScoreSpread.m_ConstantMin
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 2384007298963751050, guid: 2711cbd8c03704046b2faca8d38cef0b, type: 3}
+      propertyPath: m_Name
+      value: Satelite Spawner
+      objectReference: {fileID: 0}
+    - target: {fileID: 2939212166339377170, guid: 2711cbd8c03704046b2faca8d38cef0b, type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2939212166339377170, guid: 2711cbd8c03704046b2faca8d38cef0b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2939212166339377170, guid: 2711cbd8c03704046b2faca8d38cef0b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2939212166339377170, guid: 2711cbd8c03704046b2faca8d38cef0b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2939212166339377170, guid: 2711cbd8c03704046b2faca8d38cef0b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2939212166339377170, guid: 2711cbd8c03704046b2faca8d38cef0b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2939212166339377170, guid: 2711cbd8c03704046b2faca8d38cef0b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2939212166339377170, guid: 2711cbd8c03704046b2faca8d38cef0b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2939212166339377170, guid: 2711cbd8c03704046b2faca8d38cef0b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2939212166339377170, guid: 2711cbd8c03704046b2faca8d38cef0b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2939212166339377170, guid: 2711cbd8c03704046b2faca8d38cef0b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2711cbd8c03704046b2faca8d38cef0b, type: 3}
 --- !u!1001 &7020620491649623190
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5998,9 +6107,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1266647716}
     - target: {fileID: 7020620491369569710, guid: 234f49d3bdd8fbc40b7388b03d5701a7, type: 3}
+      propertyPath: _spawnArea
+      value: 
+      objectReference: {fileID: 7165033}
+    - target: {fileID: 7020620491369569710, guid: 234f49d3bdd8fbc40b7388b03d5701a7, type: 3}
       propertyPath: _boxCollider
       value: 
       objectReference: {fileID: 7165031}
+    - target: {fileID: 7020620491369569710, guid: 234f49d3bdd8fbc40b7388b03d5701a7, type: 3}
+      propertyPath: _asteroidArea
+      value: 
+      objectReference: {fileID: 7165033}
     - target: {fileID: 7020620491369569710, guid: 234f49d3bdd8fbc40b7388b03d5701a7, type: 3}
       propertyPath: OnCrushedCountUpdate.m_PersistentCalls.m_Calls.Array.size
       value: 0

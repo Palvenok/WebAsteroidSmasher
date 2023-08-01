@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.Events;
 
+[RequireComponent(typeof(Health)), RequireComponent(typeof(PlayerWeaponHolder))]
 public class Player : MonoBehaviour
 {
     public UnityEvent OnExplode;
@@ -8,6 +9,14 @@ public class Player : MonoBehaviour
     [SerializeField] private ParticleSystem _explodeParticles;
 
     private bool _isActive;
+    private Health _health;
+    private PlayerWeaponHolder _weaponHolder;
+
+    private void Awake()
+    {
+        _health = GetComponent<Health>();
+        _weaponHolder = GetComponent<PlayerWeaponHolder>();
+    }
 
     public bool IsActive
     {
@@ -25,5 +34,13 @@ public class Player : MonoBehaviour
         IsActive = false;
         OnExplode?.Invoke();
         gameObject.SetActive(false);
+    }
+
+    public void Upgrade()
+    {
+        if (_health.CurrentHealth >= _health.MaxHealth)
+            _weaponHolder.NextWeapon();
+        else
+            _health.Heal(1);
     }
 }

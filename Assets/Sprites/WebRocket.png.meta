@@ -414,7 +414,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Health
+      name: RepairTool
       rect:
         serializedVersion: 2
         x: 32
@@ -435,7 +435,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Booster
+      name: Satelite
       rect:
         serializedVersion: 2
         x: 48
@@ -659,11 +659,9 @@ TextureImporter:
       WebRocket 1_27: -1594414306
       WebRocket 1_25: 553404517
       SFX_Off: -1900307097
-      Health: -1148076606
       Mouse: 1733135139
       Heart: -4085082
       Fire_1: -2013455038
-      Booster: -2119210904
       Asteroid_small_0: 1648383891
       Asteroid_Big: 1150027526
       WebRocket 1_7: 453300864
@@ -676,6 +674,7 @@ TextureImporter:
       WebRocket 1_20: 97984217
       Fire_3: 1595348851
       Music_On: 657133621
+      Satelite: -2119210904
       Fire_5: -181729016
       Fire_4: -367671634
       WebRocket 1_17: -1660949413
@@ -684,6 +683,7 @@ TextureImporter:
       Fire_0: -290021124
       Heart_Brocken: 503861088
       Music_Off: -1479476143
+      RepairTool: -1148076606
       Fire_7: 728586683
   spritePackingTag: 
   pSDRemoveMatte: 0

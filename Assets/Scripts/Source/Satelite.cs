@@ -1,10 +1,12 @@
 using UnityEngine;
 using UnityEngine.Events;
+using static UnityEngine.GraphicsBuffer;
 
-public class Asteroid : MonoBehaviour
+public class Satelite : MonoBehaviour
 {
     [HideInInspector] public UnityEvent<bool> OnExplode;
 
+    [SerializeField] private GameObject _bonusPrefab;
     [SerializeField] private ParticleSystem _explodeParticles;
     [SerializeField] private AudioSource _explodeSound;
     [SerializeField] private bool _destroyOnExplode;
@@ -27,29 +29,29 @@ public class Asteroid : MonoBehaviour
         _audio = Instantiate(_explodeSound, transform.position, Quaternion.identity, transform.parent);
         _pitch = _audio.pitch;
     }
-    
+
     private void Update()
     {
-        if(!_target) return;
+        if (!_target) return;
 
         if ((_target.position - transform.position).magnitude > 15)
         {
             Explode(false);
         }
     }
-    
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
             collision.GetComponent<Health>().TakeDamage();
-            Explode(true);
+            Explode(false);
         }
     }
 
-    public void Launch(float force)
+    public void Launch()
     {
-        _rb.AddForce((_target.position - transform.position) * force);
+        _rb.AddForce((_target.position - transform.position) * 3f);
         _rb.AddTorque(Random.Range(-2f, 2f));
         _isActive = true;
     }
@@ -66,11 +68,10 @@ public class Asteroid : MonoBehaviour
             _audio.pitch = Random.Range(_pitch - .3f, _pitch + .3f);
             _audio.Play();
             Instantiate(_explodeParticles, transform.position, Quaternion.identity);
+            Instantiate(_bonusPrefab, transform.position, Quaternion.identity);
         }
 
-        OnExplode?.Invoke(scored);
-
-        if (_destroyOnExplode) 
+        if (_destroyOnExplode)
             Destroy(gameObject);
         gameObject.SetActive(false);
     }

@@ -12,6 +12,9 @@ public class Health : MonoBehaviour
 
     private int _healthCache = 0;
 
+    public int CurrentHealth => _health;
+    public int MaxHealth => _maxHealth;
+
     private void Awake()
     {
         _healthCache = _health;

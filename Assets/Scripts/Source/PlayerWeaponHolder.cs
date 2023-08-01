@@ -16,7 +16,7 @@ public class PlayerWeaponHolder : MonoBehaviour
         {
             _weaponIndex = value;
             if (value < 0) _weaponIndex = 0;
-            if (value >= _weapons.Length) _weaponIndex = 0;
+            if (value >= _weapons.Length) _weaponIndex = _weapons.Length - 1;
         }
     }
 
@@ -27,18 +27,13 @@ public class PlayerWeaponHolder : MonoBehaviour
         foreach (var weapon in _weapons)
             weapon.SetBulletPool(_bulletPool);
 
-        SetWeapon(WeaponIndex);
-    }
-
-    public void SetWeapon(int weaponIndex)
-    {
-        _activeWeapon = _weapons[weaponIndex];
+        _activeWeapon = _weapons[WeaponIndex];
     }
 
     public void NextWeapon()
     {
         WeaponIndex++;
-        SetWeapon(WeaponIndex);
+        _activeWeapon = _weapons[WeaponIndex];
     }
 
     public void Fire()

@@ -4,10 +4,10 @@ using UnityEngine.Events;
 
 public class AsteroidFactory : MonoBehaviour
 {
-    public UnityEvent<int> OnCrushedCountUpdate;
+    [HideInInspector] public UnityEvent<int> OnCrushedCountUpdate;
 
     [SerializeField] private Asteroid[] _asteroidsPrefabs;
-    [SerializeField] private BoxCollider2D _boxCollider;
+    [SerializeField] private SpawnArea _spawnArea;
     [SerializeField] private Transform _target;
     [Space]
     [SerializeField] private int _asteroidsCountAtStart = 5;
@@ -52,46 +52,13 @@ public class AsteroidFactory : MonoBehaviour
         int poolIndex = Random.Range(0, _listOfPools.Count);
 
         var asteroid = _listOfPools[poolIndex].GetNext();
-        asteroid.transform.position = GetPointAtBounds();
-        asteroid.transform.Rotate(0, 0, Random.Range(0, 180));
+        asteroid.transform.position = _spawnArea.GetPointAtBounds();
         asteroid.gameObject.SetActive(true);
         asteroid.Launch(_launchPower);
     }
 
-    private Vector2 GetPointAtBounds()
-    {
-        Vector2 point = new Vector2();
-
-        int rand = Random.Range(0, 4);
-
-        switch (rand)
-        {
-            case 0:
-                point.x = _boxCollider.bounds.max.x;
-                point.y = Random.Range(_boxCollider.bounds.min.y, _boxCollider.bounds.max.y);
-                break;
-            case 1:
-                point.x = _boxCollider.bounds.min.x;
-                point.y = Random.Range(_boxCollider.bounds.min.y, _boxCollider.bounds.max.y);
-                break;
-            case 2:
-                point.y = _boxCollider.bounds.min.y;
-                point.x = Random.Range(_boxCollider.bounds.min.x, _boxCollider.bounds.max.x);
-                break;
-            case 3:
-                point.y = _boxCollider.bounds.max.y;
-                point.x = Random.Range(_boxCollider.bounds.min.x, _boxCollider.bounds.max.x);
-                break;
-        }
-
-        return point;
-    }
-
     private void OnAsteroidExplode(bool scored)
     {
-        ///TODO:
-        ///Fix double picking on explode
-
         if(scored)
             _crushedCount++;
         _launchPower += _launchPowerAmplifier;
