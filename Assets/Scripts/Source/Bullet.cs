@@ -37,9 +37,9 @@ public class Bullet : MonoBehaviour
     {
         if (collision.CompareTag("Asteroid"))
         {
-            Explode();
             if (collision.TryGetComponent(out Health health))
                 health.TakeDamage();
+            Explode();
         }
     }
 

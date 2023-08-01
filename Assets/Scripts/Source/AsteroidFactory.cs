@@ -2,14 +2,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class AsteroidSpawner : MonoBehaviour
+public class AsteroidFactory : MonoBehaviour
 {
     public UnityEvent<int> OnCrushedCountUpdate;
 
     [SerializeField] private Asteroid[] _asteroidsPrefabs;
     [SerializeField] private BoxCollider2D _boxCollider;
     [SerializeField] private Transform _target;
+    [Space]
     [SerializeField] private int _asteroidsCountAtStart = 5;
+    [SerializeField, Min(1)] private int _increaseScorePoint = 30;
     [SerializeField] private float _launchPower = 1f;
     [SerializeField] private float _launchPowerAmplifier = 0.02f;
 
@@ -17,6 +19,8 @@ public class AsteroidSpawner : MonoBehaviour
     private int _crushedCount;
 
     private List<ObjectPool<Asteroid>> _listOfPools;
+
+    public void SetTarget(Transform target) => _target = target;
 
     private void Awake()
     {        
@@ -95,7 +99,7 @@ public class AsteroidSpawner : MonoBehaviour
         OnCrushedCountUpdate?.Invoke(_crushedCount);
 
         SpawnAsteroid();
-        if (_crushedCount % 50 == 0)
+        if (_crushedCount % _increaseScorePoint == 0)
         {
             SpawnAsteroid();
         }
